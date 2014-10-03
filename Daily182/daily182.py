@@ -31,7 +31,6 @@ def columnize():
 			index.append(0)
 		else:
 			index.append(((x - 1) * totalLines) * columnWidth)
-		print index[x]
 
 	# create output string
 	output = ""
@@ -57,4 +56,6 @@ def columnize():
 
 	return output
 
-print columnize()
+fileW = open("output.txt", "w")
+fileW.write(columnize())
+fileW.close()
